@@ -8,7 +8,8 @@ import uz.gita.memoryGame.domain.repository.TypeRepository
 import uz.gita.memoryGame.domain.usecase.TypeUseCase
 import javax.inject.Inject
 
-class TypeUseCaseImpl @Inject constructor(
+class TypeUseCaseImpl
+@Inject constructor(
     private val typeRepository: TypeRepository
 ) : TypeUseCase {
     override fun loadAllType() = flow<List<TypeData>> {

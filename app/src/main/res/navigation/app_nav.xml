@@ -18,7 +18,14 @@
         android:id="@+id/gameScreen"
         android:name="uz.gita.memoryGame.presentation.ui.screen.GameScreen"
         android:label="screen_game"
-        tools:layout="@layout/screen_game" />
+        tools:layout="@layout/screen_game" >
+        <argument
+            android:name="type"
+            app:argType="uz.gita.memoryGame.data.comman.enumclas.TypeEnum" />
+        <argument
+            android:name="level"
+            app:argType="uz.gita.memoryGame.data.comman.enumclas.LevelEnum" />
+    </fragment>
     <fragment
         android:id="@+id/levelScreen"
         android:name="uz.gita.memoryGame.presentation.ui.screen.LevelScreen"
@@ -27,6 +34,9 @@
         <action
             android:id="@+id/action_levelScreen_to_gameScreen"
             app:destination="@id/gameScreen" />
+        <argument
+            android:name="type"
+            app:argType="uz.gita.memoryGame.data.comman.enumclas.TypeEnum" />
     </fragment>
     <fragment
         android:id="@+id/splashScreen"

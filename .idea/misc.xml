@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/drawable/back_style.xml" value="0.2035" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/drawable/tile_back.xml" value="0.1915" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/level_item.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/screen_game.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/screen_home.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/screen_level.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/screen_splash.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/screen_type.xml" value="0.2421875" />
+        <entry key="..\:/Play_Market/MemoryGame2/app/src/main/res/layout/type_item.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/memorygame/app/src/main/res/drawable/tile_back.xml" value="0.1125" />
         <entry key="..\:/Play_Market/newPlayMerket/memorygame/app/src/main/res/layout/abc_alert_dialog_button_bar_material.xml" value="0.2421875" />
         <entry key="..\:/Play_Market/newPlayMerket/memorygame/app/src/main/res/layout/activity_main.xml" value="0.2421875" />

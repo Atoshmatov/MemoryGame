@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import uz.gita.memoryGame.R
 import uz.gita.memoryGame.databinding.ScreenSplashBinding
@@ -21,12 +22,19 @@ class SplashScreen : Fragment(R.layout.screen_splash) {
     private val binding by viewBinding(ScreenSplashBinding::bind)
     private val viewModel: SplashViewModel by viewModels<SplashViewModelImpl>()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.openNextLiveData.observe(this@SplashScreen, openNextObserver)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
         requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        viewModel.openNextLiveData.observe(viewLifecycleOwner, openNextObserver)
+        return@with
     }
 
     private val openNextObserver = Observer<Unit> {
         findNavController().navigate(R.id.action_splashScreen_to_homeScreen)
     }
+
 }

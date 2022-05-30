@@ -2,8 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.MemoryGame" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="colorPrimary">@color/statusBarColor</item>
-        <item name="colorPrimaryVariant">@color/statusBarColor</item>
+        <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

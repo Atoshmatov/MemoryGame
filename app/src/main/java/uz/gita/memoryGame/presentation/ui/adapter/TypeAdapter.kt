@@ -1,17 +1,20 @@
 package uz.gita.memoryGame.presentation.ui.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import uz.gita.memoryGame.R
+import uz.gita.memoryGame.data.comman.enumclas.TypeEnum
 import uz.gita.memoryGame.data.comman.model.TypeData
 import uz.gita.memoryGame.databinding.TypeItemBinding
 
-class TypeAdapter : ListAdapter<TypeData, TypeAdapter.ViewHolder>(TypeDataDiffUtils) {
-    private var onclickItemListener: ((Int) -> Unit)? = null
+class TypeAdapter :
+    ListAdapter<TypeData, TypeAdapter.ViewHolder>(TypeDataDiffUtils) {
+    private var onclickItemListener: ((TypeEnum) -> Unit)? = null
 
     object TypeDataDiffUtils : DiffUtil.ItemCallback<TypeData>() {
         override fun areItemsTheSame(oldItem: TypeData, newItem: TypeData): Boolean =
@@ -26,7 +29,7 @@ class TypeAdapter : ListAdapter<TypeData, TypeAdapter.ViewHolder>(TypeDataDiffUt
 
         init {
             binding.root.setOnClickListener {
-                onclickItemListener?.invoke(absoluteAdapterPosition)
+                onclickItemListener?.invoke(getItem(absoluteAdapterPosition).type)
             }
         }
 
@@ -36,6 +39,10 @@ class TypeAdapter : ListAdapter<TypeData, TypeAdapter.ViewHolder>(TypeDataDiffUt
                     .with(typeImage)
                     .load(getItem(absoluteAdapterPosition).image)
                     .into(typeImage)
+                typeImage.animate().setDuration(0).alpha(0f)
+                    .withEndAction {
+                        typeImage.animate().setDuration(600).alpha(1f).start()
+                    }.start()
             }
         }
 
@@ -53,7 +60,7 @@ class TypeAdapter : ListAdapter<TypeData, TypeAdapter.ViewHolder>(TypeDataDiffUt
         holder.bind()
     }
 
-    fun setOnclickItemListener(block: (Int) -> Unit) {
+    fun setOnclickItemListener(block: (TypeEnum) -> Unit) {
         onclickItemListener = block
     }
 }

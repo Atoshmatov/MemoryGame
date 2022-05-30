@@ -9,9 +9,15 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModelImpl @Inject constructor() : HomeViewModel, ViewModel() {
     override val openLevelScreenLiveData = MutableLiveData<Unit>()
+    override val openRateLiveData = MutableLiveData<Unit>()
 
 
     override fun openLevelScreen() {
         openLevelScreenLiveData.value = Unit
     }
+
+    override fun openRate() {
+        openRateLiveData.value = Unit
+    }
+
 }

@@ -7,24 +7,61 @@
     tools:context=".presentation.ui.screen.HomeScreen">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/homeImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/ss1"
+        android:src="@drawable/back_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title"
+        app:layout_constraintBottom_toTopOf="@+id/homePlayButton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:elevation="10dp"
         android:id="@+id/homePlayButton"
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:src="@drawable/button_again"
+        android:src="@drawable/button_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/homePlayButton2"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        android:elevation="10dp"
+        android:src="@drawable/tooltip_play"
+        app:layout_constraintBottom_toTopOf="@+id/homePlayButton"
+        app:layout_constraintEnd_toEndOf="@+id/homePlayButton"
+        app:layout_constraintStart_toEndOf="@+id/homePlayButton"
+        app:layout_constraintTop_toTopOf="@+id/homePlayButton" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/homePlayButton3"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:src="@drawable/button_start_lights"
+        app:layout_constraintBottom_toBottomOf="@+id/homePlayButton"
+        app:layout_constraintEnd_toEndOf="@+id/homePlayButton"
+        app:layout_constraintStart_toStartOf="@+id/homePlayButton"
+        app:layout_constraintTop_toTopOf="@+id/homePlayButton" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/homeLikeButton"
